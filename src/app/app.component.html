@@ -1,0 +1,148 @@
+<!--Header-->
+<header class="vks-bg-teal vks-text-black">
+  <div data-activates="slide-out" class="slide-toggle-button hide-on-large-only"><i class="material-icons">menu</i></div>
+  <div class="vks-header-main-content">
+    <span class="vks-header-notification">
+      <a class="vks-header-dropdown"><i class="material-icons">notifications_none</i></a>
+      <span class="vks-header-dropdown-panel clearfix">
+        <ul class="collection vks-collection">
+          <li class="collection-item avatar">
+            <i class="material-icons circle">folder</i>
+
+            <p>
+              This is First Notification to check how it looks and do we need to bring any change.
+            </p>
+            
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle green">insert_chart</i>
+
+            <p>
+              Another Notification to check the list of the notification panel.
+            </p>
+            
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle red">play_arrow</i>
+
+            <p>
+              Third Notification is only for demo purpose.
+            </p>
+            
+          </li>
+          <li class="collection-item center-align">
+            <a class="black-text">View All</a>
+          </li>
+        </ul>
+      </span>
+    </span>
+    <span class="vks-header-notification">
+      <a class="vks-header-dropdown"><i class="material-icons">person_outline</i></a>
+      <span class="vks-header-dropdown-panel clearfix">
+        <div class="vks-sidenav-card">
+
+          <span class="vks-sidenav-card-img">
+            <img src="assets/vivek.jpeg">
+          </span>
+          <span class="vks-sidenav-card-title">
+            Vivek Kumar Singh
+          </span>
+          <span class="vks-sidenav-card-desc">Web Developer</span>
+          <span class="vks-sidenav-card-button">
+            <a class="vks-btn vks-bg-green">Profile</a>
+            <a class="vks-btn vks-bg-red">Logout</a>
+          </span>
+    
+        </div>
+      </span>
+    </span>
+  </div>
+</header>
+
+<!--Sidenav-->
+<aside>
+  <ul id="slide-out" class="side-nav fixed">
+    <li class="vks-sidenav-logo vks-bg-teal">
+      <span class="center-align"><b>VKS</b>Admin</span>
+    </li>
+    <li class="vks-sidenav-card">
+
+      <span class="vks-sidenav-card-img">
+        <img src="assets/vivek.jpeg">
+      </span>
+      <span class="vks-sidenav-card-title">
+        Vivek Kumar Singh
+      </span>
+      <span class="vks-sidenav-card-desc">Web Developer</span>
+ 
+
+    </li>
+    <li class="vks-sidenav-head">Main</li>
+    <li class="vks-sidenav-list">
+      <ul>
+        <li class="singleMenu">
+          <a routerLink="dashboard">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="singleMenu">
+          <a routerLink="widgets">
+            <i class="fas fa-archive"></i>
+            <span>Widgets</span>
+          </a>
+        </li>
+        <li class="singleMenu">
+          <a routerLink="plugins">
+            <i class="fas fa-plug"></i>
+            <span>Plugins</span>
+          </a>
+        </li>
+        <li class="singleMenu">
+          <a>
+            <i class="fas fa-book"></i> 
+            <span>Documentation</span>
+            <i class="fas fa-angle-down"></i>
+          </a>
+          <ul>
+            <li>
+              <a routerLink="documentation">
+                <i class="far fa-circle"></i>
+                <span>Go To Documentation</span>
+              </a>
+            </li>            
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</aside>
+
+<!--Main Content-->
+<section class="content-wrapper">
+  
+
+  <router-outlet></router-outlet>
+
+  <div class="showLoader" [style.display]="showLoader ? 'block' : 'none'">
+
+    <div class="preloader-wrapper active" style="top: 40%;">
+      <div class="spinner-layer spinner-red-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+  </div> 
+
+</section>
+
+<!--Footer -->
+<footer>
+
+</footer>

@@ -1,0 +1,919 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  background-color: #ecf0f5;
+  position: relative;
+}
+
+.showLoader {
+  z-index: 20000;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  top: 0;
+  text-align: center;
+  left: 0;    
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  background:  transparent !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  width: 5px;
+  background: transparent !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+ul { margin: 0 !important; padding: 0 !important}
+ol { margin: 0 !important;}
+
+/* Headers */
+header, .sidebar-logo {
+  width: 100%;
+  height: 45px;
+  z-index: 1;
+}
+
+.fixed header {
+  position: fixed !important;
+}
+
+.fixed .content-wrapper {
+  padding-top: 60px !important;
+}
+
+header {
+  line-height: 60px;
+  display: flex;
+}
+
+header div:first-child {
+  flex-grow: 3;
+}
+
+header div:last-child {
+  flex-grow: 7;
+}
+
+.vks-header-main-content {
+  margin-right: 10px;
+  text-align: right;
+}
+
+.vks-header-main-content span .vks-header-dropdown {
+  color: black;
+  display: inline-block;
+  text-align: center;
+  width: 45px !important;
+  height: 45px !important;
+  cursor: pointer;
+}
+
+.vks-header-dropdown-panel-open {
+  animation-name: displayNotificationPanel;
+  animation-duration: 300ms;
+  display: block !important;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes displayNotificationPanel {
+  0% {opacity: 0; right: -7px}
+  100% {opacity: 1; right: 2px}
+}
+
+.vks-header-dropdown-panel .vks-sidenav-card {
+  text-align: center;
+}
+
+.vks-header-dropdown-panel {
+  border-radius: 0px 0px 5px 5px;
+  margin: 0;
+  position: absolute;
+  text-align: left !important;
+  right: 2px;
+  width: 300px;
+  display: none;
+  background-color: white;
+  opacity: 0;
+  margin-top: -15px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)
+}
+
+header, footer {
+  padding-left: 220px;
+}
+
+.content-wrapper {
+  padding: 7px 7px 7px 227px;
+}
+
+@media only screen and (max-width : 992px) {
+
+  header, footer {
+    padding-left: 0;
+  }
+
+  .content-wrapper {
+    padding: 7px 7px 7px 7px;
+  }
+
+}
+
+.slide-toggle-button {
+  margin-left: 5px;
+}
+
+.sidebar-logo span {
+  width: 100%;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/*Sidenav*/
+.side-nav {
+  background-color: #1e282c;
+  height: 100vh;
+  width: 220px;
+  top: 0;
+}
+
+.side-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.vks-sidenav-logo {
+  color: black;
+  height: 45px;
+  width: 100%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vks-sidenav-card {
+  color: white;
+  height: auto;
+  display: block;
+  padding: 10px;
+  text-align: left;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB8mJlW5nHyVc-pHPDu2NNTPT2kKUth3CZhCXbISZJ8fy7CXvo);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.vks-sidenav-card-img {
+  display: block;
+  height: 55px;
+}
+
+.vks-sidenav-card-img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid grey;
+}
+
+.vks-sidenav-card-title {
+  font-size: 17px;
+  display: block;
+  line-height: 22px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.vks-sidenav-card-desc {
+  font-size: 13px;
+  display: block;
+  line-height: 18px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.vks-sidenav-card-button {
+  width: 100%;
+}
+
+.vks-divider {
+  height: 1px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+}
+
+.vks-sidenav-head {
+  color: #4b646f;
+  background: #1a2226;
+  padding: 2px 10px;
+  height: 30px;
+  line-height: 26px !important;
+}
+
+.vks-sidenav-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.vks-sidenav-list ul li {
+  line-height: 40px !important;  
+}
+
+.vks-sidenav-list ul li a {
+  font-size: 14px;
+  font-weight: 300;
+  float: none;
+  display: flex;
+  color: #fff;
+  background: #1e282c;
+  height: 40px !important;
+  line-height: 40px !important;
+  padding: 0px 10px !important;
+}
+
+.vks-sidenav-list ul li a:hover {
+  transition: 100ms ease-in-out;
+  color: white;
+  background: #0a0e0f;
+}
+
+.vks-sidenav-list ul li a i {
+  float: none;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  width: 28px !important;
+  color: inherit;
+  
+}
+
+.vks-sidenav-list ul li a i:first-child {
+  text-align: left;
+  width: 15px;
+}
+
+.vks-sidenav-list ul li a i:last-child {
+  text-align: right;
+}
+
+.vks-sidenav-list ul li a span {
+  flex-grow: 8;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.vks-sidenav-list ul li ul {
+  display: none;
+}
+
+
+.vks-sidenav-submenu-open ul {
+  display: block;
+}
+
+.vks-sidenav-submenu-open a {
+  transition: 100ms ease-in-out;
+  color: white;
+  background-color: #2c3b41;
+}
+
+
+.vks-sidenav-list ul li ul li a {
+  font-size: 13px;
+  font-weight: 300;
+  float: none;
+  display: flex;
+  color: #fff;
+  background: #2c3b41;
+  height: 40px !important;
+  line-height: 40px !important;
+  padding: 0px 20px !important;
+}
+
+.vks-sidenav-list ul li ul li a:hover {
+  transition: 100ms ease-in-out;
+  color: white;
+  background-color: #2c3b41;
+}
+
+.vks-sidenav-list ul li ul li a i {
+  float: none;
+  height: 40px;
+  flex-grow: 1;
+  line-height: 40px;
+  margin: 0;
+  width: auto;
+  color: inherit;
+}
+
+.vks-sidenav-list ul li ul li a span {
+  flex-grow: 8;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/*UI Elements*/
+.vks-text-black {
+  color: black !important;
+}
+
+.vks-bg-green {
+  background: green;
+  color: white;
+}
+
+.vks-bg-red {
+  background: #dd4b39 !important;;
+  color: white;
+}
+
+.vks-bg-teal {
+  background: teal !important;;
+  color: white;
+}
+
+.vks-bg-orange {
+  background: orange !important;;
+  color: white;
+}
+
+.vks-bg-purple {
+  background: purple !important;;
+  color: white;
+}
+
+.vks-bg-white {
+  background: white !important;;
+  color: black;
+}
+
+.vks-bg-transparent {
+  background: transparent;
+}
+
+.vks-btn {
+  display: inline-block;
+  padding: 4px 9px;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.30857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  text-decoration: none;
+  border-radius: 0;
+  letter-spacing: 1px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-width: 1px;
+}
+
+.vks-collection {
+  margin: 0 !important;
+}
+
+
+
+/*Content Header And Breadcumb*/
+.content-header {
+  width: 100%;
+  padding: 0px 5px;
+  border-bottom: 1px solid #ECECEC;
+  display: flex;
+  align-items: center;
+}
+
+.vks-content-header {
+  font-size: 18px;
+  text-align: left;
+  letter-spacing: 1px;
+  flex-grow: 5;
+}
+
+.vks-breadcrumb {
+  font-size: 11px;
+  text-align: right;
+  flex-grow: 5;
+}
+
+.vks-breadcrumb a {
+  color: grey;
+  margin-left: 5px;
+}
+
+.vks-breadcrumb a:last-child {
+  color: black;
+}
+
+/*Content*/
+.main-content {
+  width: 100%;
+  margin-top: 7px;
+}
+
+/*Widgets*/
+
+.vks-widget-one {
+  width: 100%;
+  height: 80px;
+  margin-top: 25px;
+  margin-bottom: 7px;
+  border:1px solid #F0F0F0;
+  box-sizing: border-box;
+  position: relative;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+
+.vks-widget-one-icon {
+  position: absolute;
+  width: 90px;
+  height: 70px;
+  border:1px solid #F0F0F0;
+  text-align: center;
+  line-height: 90px;
+  left: 13px;
+  top: -20px;
+}
+
+
+.vks-widget-one-box {
+  text-align: right;
+}
+
+.vks-widget-one-box-header {
+  display: block;
+  font-size: 19px;
+  letter-spacing: 1px;
+  line-height: 27px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.vks-widget-one-box-text {
+  display: block;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 27px;
+  white-space: nowrap;
+}
+
+.vks-widget-one-box-desc {
+  display: block;
+  font-size: 12px;
+  color: grey;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/*Widget Profile One*/
+.vks-widget-profile-one {
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 7px;
+  border:1px solid #F0F0F0;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.vks-widget-profile-one-img {
+  position: absolute;
+  width: 100%;
+  height: 94px;
+  padding-top: 2px;
+  top: -45px;
+  left: 0;
+}
+
+.vks-widget-profile-one-img img {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  border-radius: 50%;
+  background: top;
+  border:1px solid #F0F0F0;
+}
+
+.vks-widget-profile-one-box {
+  margin-top: 54px;
+}
+
+.vks-widget-profile-one-box-name {
+  font-size: 18px;
+  line-height: 26px;
+  display: block;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.vks-widget-profile-one-box-about {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: grey;
+  display: block;
+  font-weight: 300;
+}
+
+.vks-widget-one-box-link {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #F0F0F0;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.vks-widget-one-box-link a {
+  flex-grow: 1;
+}
+
+/*Widget Profile Two*/
+
+.vks-widget-profile-two {
+  width: 100%;
+  border:1px solid #F0F0F0;
+  position: relative;
+  margin-bottom: 7px;
+  box-sizing: border-box;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.vks-widget-profile-two-main-box {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding: 5px;
+  border-bottom:1px solid #F0F0F0;
+}
+
+.vks-widget-profile-two-box-img {
+  width: 65px;
+  height: 65px;
+}
+
+.vks-widget-profile-two-box-img img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border:1px solid #F0F0F0;
+}
+
+.vks-widget-profile-two-box-name {
+  font-size: 17px;
+  line-height: 19px;
+  padding-left: 5px;
+  display: block;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.vks-widget-profile-two-box-name small {
+  font-size: 13px;
+  line-height: 16px;
+  display: block;
+  letter-spacing: 1px;
+  color: grey;
+  font-weight: 400;
+}
+
+.vks-widget-profile-two-box {
+  text-align: center;
+  margin-top: 85px;
+}
+
+.vks-widget-profile-two-box-about {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: grey;
+  display: block;
+  font-weight: 300;
+}
+
+.vks-widget-two-box-link {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #F0F0F0;
+  margin-bottom: 5px;
+  display: flex;
+}
+
+.vks-widget-two-box-link a {
+  flex-grow: 1;
+}
+
+/*Chat Widget One*/
+
+.vks-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.vks-widget-chat-one {
+  width: 100%;
+  padding: 0 !important;
+  position: relative;
+  border:1px solid #F0F0F0;
+  box-sizing: border-box;
+  background-color: white;
+  margin-top: 19px;
+  margin-bottom: 7px;
+  height: 383px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.vks-widget-chat-one-header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 15px;
+  top: -20px;
+  right: 15px;
+  height: 40px;
+  padding: 5px;
+  border-bottom:1px solid #F0F0F0;
+}
+
+.vks-widget-chat-one-header-logo {
+  text-align: left;
+  font-size: 17px;
+  line-height: 19px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+.vks-widget-chat-one-header-desc {
+  text-align: right;
+  flex-grow: 1;
+}
+
+.vks-widget-chat-one-box {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  height: -webkit-calc(100% - 80px);
+  height: -moz-calc(100% - 80px);
+  height: calc(100% - 80px);
+}
+
+.vks-widget-chat-one-users {
+  width: 400px;
+  background-color: #cdd8e5;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+
+.vks-widget-chat-one-users ul li {
+  text-align: left;
+  font-size: 16px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #F0F0F0;
+  box-sizing: border-box;
+}
+
+.vks-widget-chat-one-users ul li small {
+  text-align: left;
+  font-size: 12px;
+  white-space: nowrap;
+  line-height: 15px;
+  letter-spacing: 1px;
+  color: grey;
+  font-weight: 300;
+}
+
+.vks-widget-chat-one-users ul li.active {
+  border-right: none !important;
+  background-color: white;
+}
+
+
+.vks-widget-chat-one-messages {
+  overflow-y: auto;
+}
+
+
+
+.vks-widget-chat-one-messages ul li {
+  display: flex;
+  padding: 10px;
+}
+
+.vks-widget-chat-one-messages ul li span:first-child {
+  width: 65px;
+  height: 65px;
+}
+
+.vks-widget-chat-one-messages ul li span:first-child img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border:1px solid #F0F0F0;
+}
+
+.vks-widget-chat-one-messages ul li span:last-child {
+  text-align: left;
+  font-size: 15px;
+  line-height: 20px;
+  display: block;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding: 5px;
+}
+
+.vks-widget-chat-one-messages ul li span:last-child small {
+  font-size: 12px;
+  white-space: nowrap;
+  line-height: 15px;
+  display: block;
+  letter-spacing: 1px;
+  color: grey;
+  font-weight: 300;
+}
+
+.vks-widget-chat-one-create {
+  height: 60px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+}
+
+.vks-widget-chat-one-create-box {
+  flex: 1;
+}
+
+.vks-widget-chat-one-create-box textarea {
+  height: 60px;
+  margin-top: 5px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.vks-widget-chat-one-create-box textarea:focus {
+  border: none;
+  outline: none;
+  display: block;
+  height: 60px;
+}
+
+.vks-widget-chat-one-create-button button {
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border-radius: 50%;
+  color: black;
+}
+
+/*Widget Box*/
+.vks-widget-box {
+  width: 100%;
+  position: relative;
+  border:1px solid #F0F0F0;
+  box-sizing: border-box;
+  margin-top: 19px;
+  margin-bottom: 7px;
+  min-height: 300px !important;
+  padding: 0px !important;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.vks-widget-box-header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 15px;
+  top: -20px;
+  right: 15px;
+  height: 40px;
+  padding: 5px;
+  border-bottom:1px solid #F0F0F0;
+  align-items: center;
+}
+
+.vks-widget-box-header-title {
+  font-size: 17px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+}
+
+.vks-widget-box-header-settings {
+  font-size: 17px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  text-align: right;
+}
+
+.vks-widget-box-body {
+  margin-top: 25px;
+  padding: 10px;
+}
+
+.vks-widget-box-footer {
+  text-align: center;
+  border-top:1px solid #F0F0F0;
+}
+
+.vks-widget-box-footer a {
+  color: grey;
+  font-size: 12px;
+}
+/*Typography*/
+.vks-page-header {
+  padding-bottom: 9px;
+  display: block;
+}
+
+.vks-notice-box {
+  padding: 7px;
+  font-size: 15px;
+  background: #ffcccc;
+  border: #ff8080 solid 1px;
+  color: slategrey;
+}
+
+
+/*Documentation*/
+.vks-documentation-box1 {
+  width: 100%;
+  background-attachment: fixed;
+  padding: 30px 0px;
+  text-align: center;
+  background-color: slategrey;
+  color: white;
+  background-image: url(http://hdbackgroundspic.com/wp-content/uploads/2017/10/keyboard-hd-wallpaper.jpg)
+}
+
+.vks-documentation-box1 h4 {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.vks-documentation-box1 span {
+  font-size: 15px;
+  line-height: 17px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}

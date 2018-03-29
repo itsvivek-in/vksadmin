@@ -1,0 +1,308 @@
+<div class="content-header">
+  <div class="vks-content-header">
+    Dashboard
+  </div>
+  <div class="vks-breadcrumb">
+    <a><i class="fas fa-tachometer-alt"></i> Home</a>
+    <a>Dashboard</a>
+  </div>
+</div>
+
+<div class="main-content">
+
+  <div class="row">
+
+    <div class="col m3 vks-widget-one">
+      <div class="vks-widget-one-icon vks-bg-green">
+        <i class="fas fa-tachometer-alt fa-3x"></i>
+      </div>
+      <div class="vks-widget-one-box">
+        <span class="vks-widget-one-box-header">
+          Orders
+        </span>
+        <span class="vks-widget-one-box-text">
+          12,254
+        </span>
+        <span class="vks-widget-one-box-desc">
+          New Orders Recieved Today
+        </span>
+      </div>
+
+    </div>
+    <div class="col m3 vks-widget-one">
+      <div class="vks-widget-one-icon vks-bg-purple">
+        <i class="fas fa-plus-circle fa-3x"></i>
+      </div>
+      <div class="vks-widget-one-box">
+        <span class="vks-widget-one-box-header">
+          Registrations
+        </span>
+        <span class="vks-widget-one-box-text">
+          625
+        </span>
+        <span class="vks-widget-one-box-desc">
+          New Registration Today
+        </span>
+      </div>
+
+    </div>
+    <div class="col m3 vks-widget-one">
+      <div class="vks-widget-one-icon vks-bg-orange">
+        <i class="fas fa-bus fa-3x"></i>
+      </div>
+      <div class="vks-widget-one-box">
+        <span class="vks-widget-one-box-header">
+          Delivery
+        </span>
+        <span class="vks-widget-one-box-text">
+          98
+        </span>
+        <span class="vks-widget-one-box-desc">
+          Delivery Scheduled Today
+        </span>
+      </div>
+
+    </div>
+    <div class="col m3 vks-widget-one">
+      <div class="vks-widget-one-icon vks-bg-red">
+        <i class="fas fa-ban fa-3x"></i>
+      </div>
+      <div class="vks-widget-one-box">
+        <span class="vks-widget-one-box-header">
+          Cancelation
+        </span>
+        <span class="vks-widget-one-box-text">
+          34
+        </span>
+        <span class="vks-widget-one-box-desc">
+          Orders Canceled Today
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col m6 vks-widget-box">
+      <div class="vks-widget-box-header vks-bg-teal">
+        <span class="vks-widget-box-header-title">Sale Growth</span>
+        <span class="vks-widget-box-header-settings">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <div class="vks-widget-box-body" *ngIf="chart">
+        <canvas id="canvas">{{ chart }}</canvas>
+      </div>
+      <div class="vks-widget-box-footer">
+
+      </div>
+    </div>
+    <div class="col m6 vks-widget-box">
+      <div class="vks-widget-box-header vks-bg-purple">
+        <span class="vks-widget-box-header-title">To Do List</span>
+        <span class="vks-widget-box-header-settings">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <div class="vks-widget-box-body">
+        <ul class="collection with-header">
+          <li class="collection-header">
+            <input type="checkbox" id="test1" ngModel #text1="ngModel" />
+            <label for="test1" [style.text-decoration]="text1.value == true ? 'line-through' : 'none'">Check How Many Orders Have Touched the Amount of Rs 4000</label>
+          </li>
+          <li class="collection-header">
+            <input type="checkbox" id="test2" ngModel #text2="ngModel"/>
+            <label for="test2" [style.text-decoration]="text2.value == true ? 'line-through' : 'none'">Complete the KYC of remaining Users</label>
+          </li>
+          <li class="collection-header">
+            <input type="checkbox" id="test3" ngModel #text3="ngModel"/>
+            <label for="test3" [style.text-decoration]="text3.value == true ? 'line-through' : 'none'">Send Mail to 10 Users, who have won in the last competion</label>
+          </li>
+          <li class="collection-header">
+            <input type="checkbox" id="test4" ngModel #text4="ngModel"/>
+            <label for="test4" [style.text-decoration]="text4.value == true ? 'line-through' : 'none'">No Writer Should Write about the Faulty Product mentioned.</label>
+          </li>
+          <li class="collection-header">
+            <input type="checkbox" id="test5" ngModel #text5="ngModel"/>
+            <label for="test5" [style.text-decoration]="text5.value == true ? 'line-through' : 'none'">Blah Blah Blah.</label>
+          </li>
+        </ul>
+      </div>
+      <div class="vks-widget-box-footer">
+        <a>See More</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col m5 vks-widget-box">
+      <div class="vks-widget-box-header vks-bg-teal">
+        <span class="vks-widget-box-header-title">List of Top Performing User</span>
+        <span class="vks-widget-box-header-settings">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <div class="vks-widget-box-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Item Sold</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr>
+              <td>Avinash Kumar Chaudhary</td>
+              <td>45</td>
+              <td>Rs 4,587.36</td>
+            </tr>
+            <tr>
+              <td>Saurabh Singh</td>
+              <td>52</td>
+              <td>Rs 6,857</td>
+            </tr>
+            <tr>
+              <td>Bitesh Kumar</td>
+              <td>65</td>
+              <td>Rs 8,475</td>
+            </tr>
+            <tr>
+              <td>Arundhati Dutta</td>
+              <td>99</td>
+              <td>Rs 10,254</td>
+            </tr>
+            <tr>
+              <td>Madhavi Raj</td>
+              <td>88</td>
+              <td>Rs 9,586</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="vks-widget-box-footer">
+        <a>View All</a>
+      </div>
+    </div>
+    <div class="col m7 vks-widget-chat-one">
+      <div class="vks-widget-chat-one-header vks-bg-teal">
+        <div class="vks-widget-chat-one-header-logo">
+          Vivek Kumar Singh
+        </div>
+        <div class="vks-widget-chat-one-header-desc">
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+      </div>
+      <div class="vks-widget-chat-one-box">
+        <div class="vks-widget-chat-one-users">
+          <ul>
+            <li class="active">
+              Abhishek Kumar Singh
+              <br>
+              <small>Last Seen - 29th Oct 2017</small>
+            </li>
+            <li>
+              Saurabh Chauhan
+              <br>
+              <small>Last Seen - 16th June 2016</small>
+            </li>
+            <li>
+              Sumit Awasthi
+              <br>
+              <small>Last Seen - 14th May 2016</small>
+            </li>
+            <li>
+              Avinash Chaudhary
+              <br>
+              <small>Last Seen - 11th May 2016</small>
+            </li>
+            <li>
+              Taresh Sharma
+              <br>
+              <small>Last Seen - 6th May 2016</small>
+            </li>
+          </ul>
+        </div>
+        <div class="vks-widget-chat-one-messages">
+          <ul>
+            <li>
+              <span>
+                <img src="assets/vivek2.jpg">
+              </span>
+              <span>
+                Hi
+                <small>29th Oct 2017</small>
+              </span>
+            </li>
+            <li>
+              <span>
+                <img src="assets/vivek2.jpg">
+              </span>
+              <span>
+                Hello Buddy, are you there ?
+                <small>29th Oct 2017</small>
+              </span>
+            </li>
+            <li class="vks-row-reverse">
+              <span>
+                <img src="assets/vivek.jpeg">
+              </span>
+              <span>
+                Oh, yes ! I am sorry, was little busy these days. So, hows everything ?
+                <small>29th Oct 2017</small>
+              </span>
+            </li>
+            <li>
+              <span>
+                <img src="assets/vivek2.jpg">
+              </span>
+              <span>
+                Yeah ! Everything is good. But I have to ask some questions. Can we talk. Please provide your phone number. 
+                <small>29th Oct 2017</small>
+              </span>
+            </li>
+            <li class="vks-row-reverse">
+              <span>
+                <img src="assets/vivek.jpeg">
+              </span>
+              <span>
+                Ok. Sure, here it is, 784512547
+                <small>29th Oct 2017</small>
+              </span>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="vks-widget-chat-one-create vks-bg-teal">
+        <div class="vks-widget-chat-one-create-box">
+          <textarea></textarea>
+        </div>
+        <div class="vks-widget-chat-one-create-button">
+          <button><i class="fas fa-comment-alt"></i></button>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="row">
+    <div class="col m5 vks-widget-box">
+      <div class="vks-widget-box-header vks-bg-teal">
+        <span class="vks-widget-box-header-title">Notifications</span>
+        <span class="vks-widget-box-header-settings">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <div class="vks-widget-box-body">
+        <ul class="collection">
+          <li class="collection-item">4 Orders Have been Placed by the Anjana Singh</li>
+          <li class="collection-item">The Order Number 4521478965 is canceled by the User (P Rajwardhana)</li>
+          <li class="collection-item">5 Orders are sheduled for delivery today. Confirm the orders.</li>
+          <li class="collection-item">12 New Items Have been added in the electronics section. Check if everything visible correctly.</li>
+        </ul>
+      </div>
+      <div class="vks-widget-box-footer">
+        <a>View All</a>
+      </div>
+  </div>
+  
+</div>

@@ -1,0 +1,113 @@
+<div class="content-header">
+  <div class="vks-content-header">
+    Documentation
+  </div>
+  <div class="vks-breadcrumb">
+    <a><i class="fas fa-tachometer-alt"></i> Home</a>
+    <a>Documentation</a>
+  </div>
+</div>
+
+<div class="main-content">
+
+  <h5 class="vks-page-header">Chart JS</h5>
+  <div class="row">
+    <div class=" col m6 vks-widget-box">
+      <div class="vks-widget-box-header vks-bg-teal">
+        <span class="vks-widget-box-header-title">Line Chart</span>
+        <span class="vks-widget-box-header-settings">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <div class="vks-widget-box-body" *ngIf="chart">
+        <canvas id="canvas">{{ chart }}</canvas>
+      </div>
+      <div class="vks-widget-box-footer">
+
+      </div>
+    </div>
+    <div class=" col m6 vks-widget-box">
+      <div class="vks-widget-box-header vks-bg-teal">
+        <span class="vks-widget-box-header-title">Doughnut</span>
+        <span class="vks-widget-box-header-settings">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <div class="vks-widget-box-body" *ngIf="chart2">
+        <canvas id="canvas2">{{ chart2 }}</canvas>
+      </div>
+      <div class="vks-widget-box-footer">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="vks-howto-box">
+    <ul class="collection with-header">
+      <li class="collection-header">
+        1. npm install chart.js --save
+      </li>
+      <li class="collection-header">
+        2. import {{ '{' }} Chart {{ '}' }} from 'chart.js';
+        <br>
+        <small>Include this line in the component, in which you want to use chart.</small> 
+      </li>
+      <li class="collection-header">
+        For More Details - http://www.chartjs.org/docs/latest/
+      </li>
+    </ul>
+  </div>
+  <br>
+  <h5 class="vks-page-header">Tinymce</h5>
+  <div class="row">
+    <div class=" col m6 vks-widget-box">
+      <div class="vks-widget-box-header vks-bg-teal">
+        <span class="vks-widget-box-header-title">Tinymce</span>
+        <span class="vks-widget-box-header-settings">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <div class="vks-widget-box-body">
+        <editor apiKey="test" [init]="{plugins: 'link'}"></editor>
+      </div>
+      <div class="vks-widget-box-footer">
+
+      </div>
+    </div>
+    <div class=" col m6 vks-widget-box">
+      <div class="vks-widget-box-header vks-bg-teal">
+        <span class="vks-widget-box-header-title">Tinymce With NgModel</span>
+        <span class="vks-widget-box-header-settings">
+          <i class="fas fa-times"></i>
+        </span>
+      </div>
+      <div class="vks-widget-box-body">
+        <editor apiKey="test" [(ngModel)]="dataModel"></editor>
+      </div>
+      <div class="vks-widget-box-footer">
+
+      </div>
+    </div>
+  </div>
+  <div class="vks-howto-box">
+    <ul class="collection with-header">
+      <li class="collection-header">
+        1. npm install @tinymce/tinymce-angular
+      </li>
+      <li class="collection-header">
+        2. import {{ '{' }} EditorModule {{ '}' }} from '@tinymce/tinymce-angular';
+      </li>
+      <li class="collection-header">
+        3. Add 'EditorModule' into the imports section in your App Module.
+      </li>
+      <li class="collection-header">
+        4. Remember to change the API Key with your genuine API Key.
+      </li>
+      <li class="collection-header">
+        For More Details - https://www.tinymce.com/docs/integrations/angular2/
+      </li>
+    </ul>
+  </div>
+
+</div>
+
