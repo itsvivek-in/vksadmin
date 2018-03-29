@@ -1,15 +1,15 @@
 # VKSAdmin
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+This is an Admin Panel Template based on Angular 5 and Materialize CSS v0.100.2. It was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## How to Use
-1. Install Angular CLI Globally - npm install -g @angular/cli@1.7.3
+1. Install Angular CLI Globally - `npm install -g @angular/cli@1.7.3`
 2. Download this Project Completly and Save.
-3. Navigate to the Folder and run - npm install
-4. Once everything downloaded, run - ng serve
+3. Navigate to the Folder and run - `npm install`
+4. Once everything downloaded, run - `ng serve`
 5. Congratulations ! You have your admin panel running in development mode. Now, use http://localhost:4200 in browswer to see how it looks and its features.
 
-Note: The app will automatically reload if you change any of the source files.
+<b>Note: The app will automatically reload if you change any of the source files.</b>
 
 
 ## Code scaffolding
