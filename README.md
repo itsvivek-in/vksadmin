@@ -11,6 +11,8 @@ This is an Admin Panel Template based on Angular 5 and Materialize CSS v0.100.2.
 
 <b>Note: The app will automatically reload if you change any of the source files.</b>
 
+## Demo
+Please Follow the Link - http://vksadmin.vksknow.tech
 
 ## Code scaffolding
 
